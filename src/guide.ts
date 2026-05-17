@@ -397,40 +397,40 @@ pipx ensurepath
 
 ## Parte 6 — IDEs e ferramentas
 
-### 6.1 — VS Code — instalar
+A ordem vai do mais proprietário para o mais genérico — o VS Code fica por último para não sobrescrever associações de ficheiros dos outros.
 
-\`\`\`bash
-brew install --cask visual-studio-code
-\`\`\`
-
-### 6.2 — VS Code — restaurar extensões
-
-\`\`\`bash
-cat ~/Desktop/vscode-extensions.txt | xargs -L 1 code --install-extension
-\`\`\`
-
-### 6.3 — Cursor — instalar
+### 6.1 — Cursor — instalar
 
 \`\`\`bash
 brew install --cask cursor
 \`\`\`
 
-### 6.4 — Cursor — registar comando shell
+### 6.2 — Cursor — registar comando shell
 
 \`Cmd+Shift+P → "Shell Command: Install 'cursor' command in PATH"\`
 
-Pode importar settings do VSCode na tela de setup inicial.
-
-### 6.5 — Claude Code — instalar
+### 6.3 — Claude Code — instalar
 
 \`\`\`bash
 npm install -g @anthropic-ai/claude-code
 \`\`\`
 
-### 6.6 — Claude Code — autenticar
+### 6.4 — Claude Code — autenticar
 
 \`\`\`bash
 claude   # abre browser pra autenticar
+\`\`\`
+
+### 6.5 — VS Code — instalar
+
+\`\`\`bash
+brew install --cask visual-studio-code
+\`\`\`
+
+### 6.6 — VS Code — restaurar extensões
+
+\`\`\`bash
+cat ~/Desktop/vscode-extensions.txt | xargs -L 1 code --install-extension
 \`\`\`
 
 ### 6.7 — CLIs e utilitários
