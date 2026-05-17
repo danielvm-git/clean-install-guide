@@ -77,24 +77,22 @@ find ~/Library/Mobile\\ Documents/com~apple~CloudDocs -name "node_modules" \\
 
 ### 0.6 — Checklist final antes de formatar
 
-\`\`\`
-[ ] Todos os projetos com remote GitHub confirmado (git remote -v)
-[ ] Nenhum projeto com arquivos sujos não commitados
-[ ] node_modules removidos dos projetos no iCloud
-[ ] Backup do ~/.ssh/ (chaves SSH)
-[ ] Backup do ~/.gitconfig
-[ ] Backup do ~/.zshrc e ~/.zshrc.local (tem API keys aí)
-[ ] Backup do ~/.npmrc se existir
-[ ] Backup de .env de cada projeto
-[ ] Configs do Claude Code: ~/.claude/
-[ ] Lista de extensões VSCode: code --list-extensions > ~/Desktop/vscode-extensions.txt
-[ ] Lista de extensões Cursor: cursor --list-extensions > ~/Desktop/cursor-extensions.txt
-[ ] Sign out do iCloud (System Settings → Apple ID)
-[ ] Sign out do iMessage e FaceTime
-[ ] Sign out da App Store
-[ ] Sign out de licenças por máquina (Adobe, JetBrains, etc.)
-[ ] Desautoriza o Music app (Account → Authorizations → Deauthorize This Computer)
-\`\`\`
+- [ ] Todos os projetos com remote GitHub confirmado (\`git remote -v\`)
+- [ ] Nenhum projeto com arquivos sujos não commitados
+- [ ] node_modules removidos dos projetos no iCloud
+- [ ] Backup do \`~/.ssh/\` (chaves SSH)
+- [ ] Backup do \`~/.gitconfig\`
+- [ ] Backup do \`~/.zshrc\` e \`~/.zshrc.local\` (tem API keys aí)
+- [ ] Backup do \`~/.npmrc\` se existir
+- [ ] Backup de \`.env\` de cada projeto
+- [ ] Configs do Claude Code: \`~/.claude/\`
+- [ ] Lista de extensões VSCode: \`code --list-extensions > ~/Desktop/vscode-extensions.txt\`
+- [ ] Lista de extensões Cursor: \`cursor --list-extensions > ~/Desktop/cursor-extensions.txt\`
+- [ ] Sign out do iCloud (System Settings → Apple ID)
+- [ ] Sign out do iMessage e FaceTime
+- [ ] Sign out da App Store
+- [ ] Sign out de licenças por máquina (Adobe, JetBrains, etc.)
+- [ ] Desautoriza o Music app (Account → Authorizations → Deauthorize This Computer)
 
 ---
 
