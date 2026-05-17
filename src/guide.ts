@@ -124,11 +124,10 @@ Depois confirma cada item:
 - [ ] Configs do Claude Code: \`~/.claude/\`
 - [ ] Lista de extensões VSCode: \`code --list-extensions > ~/Desktop/vscode-extensions.txt\`
 - [ ] Lista de extensões Cursor: \`cursor --list-extensions > ~/Desktop/cursor-extensions.txt\`
-- [ ] Sign out do iCloud (System Settings → Apple ID)
-- [ ] Sign out do iMessage e FaceTime
-- [ ] Sign out da App Store
-- [ ] Sign out de licenças por máquina (Adobe, JetBrains, etc.)
-- [ ] Desautoriza o Music app (Account → Authorizations → Deauthorize This Computer)
+- [ ] Desativa licenças por dispositivo (Adobe, JetBrains, Office) — cada app tem o seu próprio contador de activações, o erase não as liberta
+- [ ] Desautoriza o Music app (Account → Authorizations → Deauthorize This Computer) — limitado a 5 Macs por Apple ID
+
+> iCloud, iMessage, FaceTime e App Store **não precisam de sign-out manual** — o assistente de "Erase All Content and Settings" trata disso automaticamente no M3.
 
 ---
 
@@ -382,8 +381,8 @@ O \`source\` aqui activa o \`pyenv init\` do \`.zshrc\` agora que o pyenv está 
 ### 5.2 — Python — instalar versão
 
 \`\`\`bash
-pyenv install 3.12
-pyenv global 3.12
+pyenv install 3.13
+pyenv global 3.13
 \`\`\`
 
 ### 5.3 — pip e pipx — instalar
@@ -578,16 +577,16 @@ mv ~/Library/Mobile\\ Documents/com~apple~CloudDocs/nome-do-projeto ~/Developer/
 | 11 | Node 24 LTS — instalar | Terminal |
 | 12 | pnpm — instalar | Terminal |
 | 13 | pyenv — instalar | Terminal |
-| 14 | Python 3.12 — instalar | Terminal |
+| 14 | Python 3.13 — instalar | Terminal |
 | 15 | pip e pipx | Terminal |
-| 16 | VS Code — instalar e restaurar extensões | Terminal |
-| 17 | Cursor — instalar e registar comando shell | Terminal |
-| 18 | Claude Code — instalar e autenticar | Terminal |
+| 16 | Cursor — instalar e registar comando shell | Terminal |
+| 17 | Claude Code — instalar e autenticar | Terminal |
+| 18 | VS Code — instalar e restaurar extensões | Terminal |
 | 19 | CLIs e utilitários | Terminal |
 | 20 | CLIs de deploy (wrangler, netlify-cli) | Terminal |
-| 21 | Cria ~/Code/ e reclona repos do GitHub | Terminal |
+| 21 | Cria ~/Developer/ e reclona repos do GitHub | Terminal |
 | 22 | Restaura .env dos projetos do backup | Por projeto |
-| 23 | Move projetos do iCloud Drive pra ~/Code/ | Terminal |
+| 23 | Move projetos do iCloud Drive pra ~/Developer/ | Terminal |
 `
 
 export const sections = [
