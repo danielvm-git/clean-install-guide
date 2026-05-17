@@ -99,7 +99,6 @@ cp ~/.zshrc.local "$BACKUP/" 2>/dev/null
 cp ~/.npmrc "$BACKUP/" 2>/dev/null
 cp -r ~/.claude "$BACKUP/" 2>/dev/null
 
-# .env de cada projeto
 find ~ -name ".env" \
   -not -path "*/node_modules/*" \
   -not -path "*/.Trash/*" \
