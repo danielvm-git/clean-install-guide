@@ -95,7 +95,6 @@ mkdir -p "$BACKUP"
 cp -r ~/.ssh "$BACKUP/"
 cp ~/.gitconfig "$BACKUP/" 2>/dev/null
 cp ~/.zshrc "$BACKUP/" 2>/dev/null
-cp ~/.zshrc.local "$BACKUP/" 2>/dev/null
 cp ~/.npmrc "$BACKUP/" 2>/dev/null
 cp -r ~/.claude "$BACKUP/" 2>/dev/null
 
@@ -118,7 +117,7 @@ Depois confirma cada item:
 - [ ] node_modules removidos dos projetos no iCloud
 - [ ] Backup do \`~/.ssh/\` (chaves SSH)
 - [ ] Backup do \`~/.gitconfig\`
-- [ ] Backup do \`~/.zshrc\` e \`~/.zshrc.local\` (tem API keys aí)
+- [ ] Backup do \`~/.zshrc\`
 - [ ] Backup do \`~/.npmrc\` se existir
 - [ ] Backup de \`.env\` de cada projeto
 - [ ] Configs do Claude Code: \`~/.claude/\`
@@ -282,27 +281,12 @@ alias preview='pnpm run preview'
 
 # ---- direnv ----
 command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
-
-# ---- API keys e segredos (não vai pro git) ----
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 EOF
 \`\`\`
 
 O plugin \`nvm\` do OMZ faz lazy-loading — carrega o nvm apenas na primeira vez que o comando é chamado, sem atrasar o arranque do shell. O bloco manual de NVM deixa de ser necessário.
 
-### 3.4 — Criar o .zshrc.local
-
-\`\`\`bash
-cat > ~/.zshrc.local << 'EOF'
-export ANTHROPIC_API_KEY="sk-..."
-export CLOUDFLARE_API_TOKEN="..."
-# outras API keys aqui
-EOF
-\`\`\`
-
-Nunca commita esse arquivo — guarda os segredos fora do git.
-
-### 3.5 — Activar
+### 3.4 — Activar
 
 \`\`\`bash
 source ~/.zshrc
@@ -310,7 +294,7 @@ source ~/.zshrc
 
 A partir daqui não se toca mais no \`.zshrc\`. As próximas instalações limitam-se a \`brew install\` ou \`npm install -g\` — o shell já sabe o que fazer quando cada ferramenta estiver presente.
 
-### 3.6 — direnv — fluxo por projecto
+### 3.5 — direnv — fluxo por projecto
 
 O direnv carrega variáveis de ambiente automaticamente ao entrar numa pasta e descarrega ao sair — sem \`source\` manual, sem poluir o shell global.
 
