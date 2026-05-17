@@ -281,6 +281,9 @@ alias preview='pnpm run preview'
 # ---- fzf ----
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# ---- direnv ----
+command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
+
 # ---- API keys e segredos (não vai pro git) ----
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 EOF
@@ -307,6 +310,34 @@ source ~/.zshrc
 \`\`\`
 
 A partir daqui não se toca mais no \`.zshrc\`. As próximas instalações limitam-se a \`brew install\` ou \`npm install -g\` — o shell já sabe o que fazer quando cada ferramenta estiver presente.
+
+### 3.6 — direnv — fluxo por projecto
+
+O direnv carrega variáveis de ambiente automaticamente ao entrar numa pasta e descarrega ao sair — sem \`source\` manual, sem poluir o shell global.
+
+Em cada projecto novo:
+
+\`\`\`bash
+echo 'dotenv' > .envrc   # diz ao direnv para ler o .env da pasta
+direnv allow              # autoriza este diretório (pedido uma vez)
+\`\`\`
+
+Cria o \`.env\` com os segredos:
+
+\`\`\`bash
+VITE_API_URL=https://api.exemplo.com
+VITE_API_KEY=sk-...
+\`\`\`
+
+Commita o template sem valores e ignora o ficheiro real:
+
+\`\`\`bash
+cp .env .env.example      # template para o repo (apaga os valores antes)
+echo '.env' >> .gitignore
+echo '.envrc' >> .gitignore
+\`\`\`
+
+A partir daí: \`cd\` entra na pasta → variáveis carregadas. \`cd ..\` → limpas.
 
 ---
 
@@ -408,6 +439,7 @@ claude   # abre browser pra autenticar
 brew install --cask docker         # Docker Desktop
 brew install jq                    # JSON no terminal
 brew install httpie                # alternativa ao curl
+brew install direnv           # carrega .env por projecto automaticamente ao entrar na pasta
 brew install fzf              # fuzzy finder — Ctrl+R turbinado no terminal
 brew install ripgrep          # grep rápido que ignora .git e node_modules
 brew install fd               # find mais simples: fd "*.ts"
