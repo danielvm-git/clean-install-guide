@@ -134,13 +134,13 @@ Depois confirma cada item:
 
 ## Parte 1 — Clean Install do macOS
 
-### Método recomendado (Apple Silicon e Intel com T2)
+### iMac M3 — Erase All Content and Settings
 
 **Apple menu → System Settings → General → Transfer or Reset → Erase All Content and Settings**
 
 Autentica, segue os passos, deixa apagar tudo. O Mac reinicia no Setup Assistant — **não restaure de backup**, configura como novo. Cria seu usuário com nome curto e sem espaço (\`daniel\`, não \`Daniel Mendes\`) — evita dor de cabeça com paths no terminal.
 
-**Se "Erase All Content" não aparecer** (iMac Intel antigo sem T2): reinicia segurando \`Cmd+R\`, abre Disk Utility → apaga o disco em APFS, reinstala o macOS pelo menu.
+> Os caminhos de System Settings abaixo foram verificados no Sequoia. No Tahoe (26.x) a navegação pode ter mudado ligeiramente — usa a busca do Settings se não encontrares à primeira.
 
 ### Após o primeiro boot
 
